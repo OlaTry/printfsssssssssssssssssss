@@ -1,0 +1,38 @@
+#include "main.h"
+
+#include "main.h"
+
+/**
+ * get_range - Calculates the width for printing
+ * @format: Formatted string in which to print the arguments.
+ * @i: List of arguments to be printed.
+ * @list: list of arguments.
+ *
+ * Return: range.
+ */
+int get_range(const char *format, int *i, va_list list)
+{
+	int x;
+	int range = 0;
+
+	for (x = *i + 1; format[x] != '\0'; x++)
+	{
+		if (is_digit(format[x]))
+		{
+			range *= 10;
+			range += format[x] - '0';
+		}
+		else if (format[x] == '*')
+		{
+			x++;
+			range = va_arg(list, int);
+			break;
+		}
+		else
+			break;
+	}
+
+	*i = x - 1;
+
+	return (range);
+}
