@@ -1,33 +1,35 @@
 #include "main.h"
 
+#include "main.h"
+
 /**
  * get_all_flags - Calculates active flags
  * @format: Formatted string in which to print the arguments
  * @i: take a parameter.
- * Return: Flags:
+ * Return: Banner:
  */
 int get_all_flags(const char *format, int *i)
 {
-	int j, curr_i;
-	int flags = 0;
+	Int x;
+	int y;
+	int banner  = 0;
 	const char FLAGS_CH[] = {'-', '+', '0', '#', ' ', '\0'};
 	const int FLAGS_ARR[] = {F_MINUS, F_PLUS, F_ZERO, F_HASH, F_SPACE, 0};
 
-	for (curr_i = *i + 1; format[curr_i] != '\0'; curr_i++)
+	for (x = *i + 1; format[x] != '\0'; x++)
 	{
-		for (j = 0; FLAGS_CH[j] != '\0'; j++)
-			if (format[curr_i] == FLAGS_CH[j])
+		for (y = 0; FLAGS_CH[y] != '\0'; y++)
+			if (format[x] == FLAGS_CH[y])
 			{
-				flags |= FLAGS_ARR[j];
+				banner  |= FLAGS_ARR[y];
 				break;
 			}
 
-		if (FLAGS_CH[j] == 0)
+		if (FLAGS_CH[y] == 0)
 			break;
 	}
 
-	*i = curr_i - 1;
+	*i = x - 1;
 
-	return (flags);
+	return (banner);
 }
-
