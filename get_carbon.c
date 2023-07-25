@@ -14,7 +14,7 @@
 int get_carbon(const char *fmt, int *ind, va_list list, char buffer[],
 	int flags, int width, int precision, int size)
 {
-	int i, length= 0, num = -1;
+	int i, length = 0, num = -1;
 	fmt_t arr[] = {
 		{'c', print_char}, {'s', print_string}, {'%', print_percent},
 		{'i', print_int}, {'d', print_int}, {'b', print_binary},
@@ -30,9 +30,9 @@ int get_carbon(const char *fmt, int *ind, va_list list, char buffer[],
 	{
 		if (fmt[*ind] == '\0')
 			return (-1);
-		length+= write(1, "%%", 1);
+		length += write(1, "%%", 1);
 		if (fmt[*ind - 1] == ' ')
-			length+= write(1, " ", 1);
+			length += write(1, " ", 1);
 		else if (width)
 		{
 			--(*ind);
@@ -42,7 +42,7 @@ int get_carbon(const char *fmt, int *ind, va_list list, char buffer[],
 				--(*ind);
 			return (1);
 		}
-		length+= write(1, &fmt[*ind], 1);
+		length += write(1, &fmt[*ind], 1);
 		return (length);
 	}
 	return (num);
