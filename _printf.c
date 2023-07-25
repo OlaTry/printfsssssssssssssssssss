@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 			precision = get_tuning(format, &i, list);
 			size = get_length(format, &i);
 			++i;
-			printed = handle_print(format, &i, list, buffer,
+			printed = get_carbon(format, &i, list, buffer,
 				flags, width, precision, size);
 			if (printed == -1)
 				return (-1);
