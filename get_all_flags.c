@@ -10,7 +10,7 @@
  */
 int get_all_flags(const char *format, int *i)
 {
-	Int x;
+	int x;
 	int y;
 	int banner  = 0;
 	const char FLAGS_CH[] = {'-', '+', '0', '#', ' ', '\0'};
