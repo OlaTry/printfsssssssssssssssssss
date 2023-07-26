@@ -46,7 +46,7 @@ int hwc(char c, char buffer[],
 
 /************************* WRITE NUMBER *************************/
 /**
- * write_number - Prints a string
+ * wn - Prints a string
  * @is_negative: Lista of arguments
  * @ind: char types.
  * @buffer: Buffer array to handle print
@@ -57,7 +57,7 @@ int hwc(char c, char buffer[],
  *
  * Return: Number of chars printed.
  */
-int write_number(int is_negative, int ind, char buffer[],
+int wn(int is_negative, int ind, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int length = BUFF_SIZE - ind - 1;
