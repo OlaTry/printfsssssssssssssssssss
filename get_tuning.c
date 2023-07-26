@@ -4,11 +4,11 @@
  * get_tuning - Calculates the precision for printing
  * @format: Formatted string in which to print the arguments
  * @i: List of arguments to be printed.
- * @list: list of arguments.
+ * @ap: list of arguments.
  *
  * Return: Tuning.
  */
-int get_tuning(const char *format, int *i, va_list list)
+int get_tuning(const char *format, int *i, va_list ap)
 {
 	int x = *i + 1;
 	int tuning = -1;
@@ -28,7 +28,7 @@ int get_tuning(const char *format, int *i, va_list list)
 		else if (format[x] == '*')
 		{
 			x++;
-			tuning = va_arg(list, int);
+			tuning = va_arg(ap, int);
 			break;
 		}
 		else

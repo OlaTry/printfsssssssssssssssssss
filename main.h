@@ -41,7 +41,7 @@ typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
 int get_carbon(const char *fmt, int *i,
-va_list list, char buffer[], int flags, int width, int precision, int size);
+va_list ap, char buffer[], int flags, int width, int precision, int size);
 
 /****************** FUNCTIONS ******************/
 
@@ -80,8 +80,8 @@ int print_pointer(va_list types, char buffer[],
 
 /* Funciotns to handle other specifiers */
 int get_all_flags(const char *format, int *i);
-int get_range(const char *format, int *i, va_list list);
-int get_tuning(const char *format, int *i, va_list list);
+int get_range(const char *format, int *i, va_list ap);
+int get_tuning(const char *format, int *i, va_list ap);
 int get_length(const char *format, int *i);
 
 /*Function to print string in reverse*/
