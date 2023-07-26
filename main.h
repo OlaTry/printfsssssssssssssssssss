@@ -108,10 +108,10 @@ char buffer[],
 
 /****************** UTILS ******************/
 int good(char);
-int append_hexa_code(char, char[], int);
-int is_digit(char);
+int attach(char, char[], int);
+int a_number(char);
 
-long int convert_size_number(long int num, int size);
-long int convert_size_unsgnd(unsigned long int num, int size);
+long int csn(long int num, int size);
+long int csu(unsigned long int num, int size);
 
 #endif /* MAIN_H */

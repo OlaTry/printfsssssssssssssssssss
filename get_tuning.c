@@ -20,7 +20,7 @@ int get_tuning(const char *format, int *i, va_list list)
 
 	for (x += 1; format[x] != '\0'; x++)
 	{
-		if (is_digit(format[x]))
+		if (a_number(format[x]))
 		{
 			tuning *= 10;
 			tuning += format[x] - '0';

@@ -17,7 +17,7 @@ int get_range(const char *format, int *i, va_list list)
 
 	for (x = *i + 1; format[x] != '\0'; x++)
 	{
-		if (is_digit(format[x]))
+		if (a_number(format[x]))
 		{
 			range *= 10;
 			range += format[x] - '0';
