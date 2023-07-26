@@ -74,12 +74,12 @@ int wn(int is_negative, int ind, char buffer[],
 	else if (flags & F_SPACE)
 		extra_ch = ' ';
 
-	return (write_num(ind, buffer, flags, width, precision,
+	return (wnu(ind, buffer, flags, width, precision,
 		length, padd, extra_ch));
 }
 
 /**
- * write_num - Write a number using a bufffer
+ * wnu - Write a number using a bufffer
  * @ind: Index at which the number starts on the buffer
  * @buffer: Buffer
  * @flags: Flags
@@ -91,7 +91,7 @@ int wn(int is_negative, int ind, char buffer[],
  *
  * Return: Number of printed chars.
  */
-int write_num(int ind, char buffer[],
+int wnu(int ind, char buffer[],
 	int flags, int width, int prec,
 	int length, char padd, char extra_c)
 {
