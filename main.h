@@ -111,7 +111,7 @@ int good(char);
 int attach(char, char[], int);
 int a_number(char);
 
-long int csn(long int num, int size);
+long int csn(long int n, int s);
 long int csu(unsigned long int n, int s);
 
 #endif /* MAIN_H */
