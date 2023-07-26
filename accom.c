@@ -70,17 +70,17 @@ long int csn(long int num, int size)
 
 /**
  * csu - Casts a number to the specified size
- * @num: Number to be casted
- * @size: Number indicating the type to be casted
+ * @n: Number to be casted
+ * @s: Number indicating the type to be casted
  *
  * Return: Casted value of num
  */
-long int csu(unsigned long int num, int size)
+long int csu(unsigned long int n, int s)
 {
-	if (size == S_LONG)
-		return (num);
-	else if (size == S_SHORT)
-		return ((unsigned short)num);
+	if (s == S_LONG)
+		return (n);
+	else if (s == S_SHORT)
+		return ((unsigned short)n);
 
-	return ((unsigned int)num);
+	return ((unsigned int)n);
 }
