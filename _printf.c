@@ -3,11 +3,11 @@
 void stoop(char buffer[], int *buff_ind);
 
 /**
- * ptf - Printf function
+ * _printf - Printf function
  * @format: format.
  * Return: Printed chars.
  */
-int ptf(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	int i, printed = 0, printed_chars = 0;
 	int flags, width, precision, size, buff_ind = 0;

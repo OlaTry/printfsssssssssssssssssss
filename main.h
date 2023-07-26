@@ -39,7 +39,7 @@ struct fmt
  */
 typedef struct fmt fmt_t;
 
-int ptf(const char *format, ...);
+int _printf(const char *format, ...);
 int get_carbon(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
 
